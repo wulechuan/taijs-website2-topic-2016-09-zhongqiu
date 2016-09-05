@@ -95,15 +95,72 @@
 			}
 			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.lit {
 				z-index: 2;
-				-webkit-animation: lit-lantern-flickering 1.8s infinite;
-				        animation: lit-lantern-flickering 1.8s infinite;
+				-webkit-animation: lit-lantern-flickering infinite;
+				        animation: lit-lantern-flickering infinite;
+				    -ms-animation: lit-lantern-flickering infinite;
+			}
+			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.lit {
+				-webkit-animation-delay: 0s;
+				        animation-delay: 0s;
+				    -ms-animation-delay: 0s;
 
+				-webkit-animation-duration: 5.1s;
+				        animation-duration: 5.1s;
+				    -ms-animation-duration: 5.1s;
+			}
+			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.lit {
+				-webkit-animation-delay: -0.28s;
+				        animation-delay: -0.28s;
+				    -ms-animation-delay: -0.28s;
+
+				-webkit-animation-duration: 8.1s;
+				        animation-duration: 8.1s;
+				    -ms-animation-duration: 8.1s;
+			}
+			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.lit {
+				-webkit-animation-delay: -0.66s;
+				        animation-delay: -0.66s;
+				    -ms-animation-delay: -0.66s;
+
+				-webkit-animation-duration: 8.7s;
+				        animation-duration: 8.7s;
+				    -ms-animation-duration: 8.7s;
+			}
+
+			@-webkit-keyframes lit-lantern-flickering {
+				 0% { opacity: 0.66; }
+				12% { opacity: 0.93; }
+				19% { opacity: 1.00; }
+				36% { opacity: 1.00; }
+				50% { opacity: 0.45; }
+				75% { opacity: 0.96; }
+				88% { opacity: 1.00; }
+				96% { opacity: 0.80; }
+				to  { opacity: 0.66; }
 			}
 
 			@keyframes lit-lantern-flickering {
-				 0% { opacity: 1; }
-				50% { opacity: 0.75; }
-				to  { opacity: 1; }
+				 0% { opacity: 0.66; }
+				12% { opacity: 0.93; }
+				19% { opacity: 1.00; }
+				36% { opacity: 1.00; }
+				50% { opacity: 0.45; }
+				75% { opacity: 0.96; }
+				88% { opacity: 1.00; }
+				96% { opacity: 0.80; }
+				to  { opacity: 0.66; }
+			}
+
+			@-ms-keyframes lit-lantern-flickering {
+				 0% { opacity: 0.66; }
+				12% { opacity: 0.93; }
+				19% { opacity: 1.00; }
+				36% { opacity: 1.00; }
+				50% { opacity: 0.45; }
+				75% { opacity: 0.96; }
+				88% { opacity: 1.00; }
+				96% { opacity: 0.80; }
+				to  { opacity: 0.66; }
 			}
 
 			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.drak {
