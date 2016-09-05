@@ -704,6 +704,12 @@
 	#sub-2016-09-zq .progress-bar .current-progress .ie8-deco:before {
 		content: '▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌';
 	}
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {    
+	   /* IE10-specific styles go here */    
+		:root #sub-2016-09-zq .progress-bar .current-progress .ie8-deco {
+			display: none;
+		}
+	}
 
 	#sub-2016-09-zq .progress-bar .current-progress::before {
 		content: '';
