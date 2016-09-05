@@ -211,23 +211,22 @@
 	}
 
 
-#sub-2016-09-zq #zhongqiu-section-3,
-#sub-2016-09-zq #zhongqiu-section-2,
-#sub-2016-09-zq #zhongqiu-section-1 {
+
+#sub-2016-09-zq .section {
 	overflow: hidden;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto 100%;
 	}
-	#sub-2016-09-zq #zhongqiu-section-1 {
+	#sub-2016-09-zq .section#zhongqiu-section-1 {
 		height: 1025px;
 		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-01.jpg);
 	}
-	#sub-2016-09-zq #zhongqiu-section-2 {
+	#sub-2016-09-zq .section#zhongqiu-section-2 {
 		height: 865px;
 		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-02.jpg);
 	}
-	#sub-2016-09-zq #zhongqiu-section-3 {
+	#sub-2016-09-zq .section#zhongqiu-section-3 {
 		height: 797px;
 		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-03.jpg);
 	}
