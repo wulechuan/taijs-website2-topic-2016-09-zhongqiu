@@ -744,3 +744,45 @@
 		background-color: #646b85;
 		background-image: none;
 	}
+
+
+#sub-2016-09-zq .aside {
+	position: fixed;
+	right: 50px;
+	top: 25%;
+	z-index: 40;
+	}
+
+	#sub-2016-09-zq .aside.floating-qrcode {
+		width: 130px;
+		height: 270px;
+	}
+
+	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-look.bg {
+		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode-deco.png);
+	}
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode {
+		display: block;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 106px;
+		margin: 0 auto;
+		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
+	}
+	#sub-2016-09-zq .aside.floating-qrcode .label {
+		display: block;
+		width: 100px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 216px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 1.4;
+	}
+
