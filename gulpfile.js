@@ -83,21 +83,22 @@ gulp.task('before-everything', () => {
 
 var baseCssGlobs = [
   // 下面壹壹列出各个glob，目的是保证这些css文件合并的顺序。我们知道，错误的顺序将导致错误的结果。
-  pathSrcRoot+'/styles/base/_reset*.css',
-  pathSrcRoot+'/styles/base/iconfonts/*.css',
-  pathSrcRoot+'/styles/base/_fonts*.css',
-  pathSrcRoot+'/styles/base/base.css',
-  pathSrcRoot+'/styles/base/layout.css',
+  pathSrcRoot+'/styles/**/*.css'
+  // pathSrcRoot+'/styles/base/_reset*.css',
+  // pathSrcRoot+'/styles/base/iconfonts/*.css',
+  // pathSrcRoot+'/styles/base/_fonts*.css',
+  // pathSrcRoot+'/styles/base/base.css',
+  // pathSrcRoot+'/styles/base/layout.css',
 ];
 
 gulp.task('styles-base', ['before-everything'], () => {
   return gulp.src(baseCssGlobs)
     // .pipe(sourcemaps.init())
-      .pipe(concat('base.min.css')) // 这些css我要合并成单一文件
+      .pipe(concat('subject-2016-09-zhongqiu.min.css')) // 这些css我要合并成单一文件
       .pipe(cssmin())
     // .pipe(sourcemaps.write('.'))
 
-    .pipe(gulp.dest(pathNewDistCacheRoot+'/styles/base/')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/styles/pages/')) // 将文件写入指定文件夹
   ;
 });
 
@@ -120,7 +121,7 @@ gulp.task('styles-specific', ['before-everything'], () => {
 
   return gulp.src(
     [
-      pathSrcRoot+'/styles/**/*.css'
+      // pathSrcRoot+'/styles/**/*.css'
     ]
       .concat(baseCssGlobsIngored)
   )
@@ -142,8 +143,8 @@ gulp.task('styles-specific', ['before-everything'], () => {
 // 实际上，该 styles 任务可以没有自己的动作，那样的话，其存在意义仅仅是将其所用前导任务打成一个任务包。
 gulp.task('styles', [
   'styles-base',
-  'styles-iconfonts',
-  'styles-specific'
+  // 'styles-iconfonts',
+  // 'styles-specific'
 ], () => {
   return gulp.src([
     pathNewDistCacheRoot+'/styles/**/*.css'
