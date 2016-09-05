@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [
+				"node_modules",
+				"app-dist",
+				"app-dist1",
+				"utilities",
+				"_temp",
+				"app-dist-cache",
+			],
+			"file_exclude_patterns": []
+		}
+	]
+}

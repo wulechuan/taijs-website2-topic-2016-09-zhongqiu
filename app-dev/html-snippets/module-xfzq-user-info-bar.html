@@ -1,0 +1,187 @@
+<div class="row" id="user-info-bar">
+	<div class="ie-bg"></div>
+	<div class="width-wrap">
+		<div class="user-avatar-block">
+			<div id="user-info-bar-user-avatar"></div>
+        </div>
+        <div class="user-info-block font-song-ti">
+            <ul class="line-1 toolbar"
+                ><li class="user-name-block"
+                    ><h3 class="font-default" 
+                        ><span class="value greeting">您好，</span
+                        ><span class="value user-name">用户</span
+                    ></h3
+                ></li
+                ><li class="tips-block"
+                    ><p
+                        ><span class="tip-general">总有理财新发现</span>
+                        <a class="tip-for-avatar" href="#">点击修改头像</a
+                    ></p
+                ></li
+            ></ul>
+
+            <ul class="line-2 toolbar has-separator"
+                ><li class="user-rank-block"
+                    ><span class="list-label">等级：</span
+                    ><span class="user-rank-wrap"
+                        ><em class="bg"><i class="iconfont icon-silk-banner-verticle"></i></em
+                        ><span class="value user-rank">3</span
+                    ></span
+                ></li
+                ><li class="user-profile-items-block"
+                    ><span class="list-label">个人资料：</span
+                    ><ul class="toolbar profile-items-list" 
+                        ><li
+                            ><i class="iconfont icon-mobile-phone-circled"></i
+                            ><span class="list-label">mobile: <span class="value user-mobile"></span></span
+                        ></li
+                        ><li
+                            ><i class="iconfont icon-envelope-circled"></i
+                            ><span class="list-label">email:  <span class="value user-email"></span></span
+                        ></li
+                        ><li
+                            ><i class="iconfont icon-bank-card-circled"></i
+                            ><span class="list-label">more</span
+                        ></li
+                    ></ul
+                ></li
+                ><li class="user-last-login-info-block"
+                    ><span class="list-label">上次登录时间：</span
+                    ><span class="value user-last-login">2016.06.23 17:55:33</span
+                ></li
+            ></ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var avatar = new Avatar($('#user-info-bar-user-avatar')[0], {
+                imageUri: '../images/_temp/fake-avatar-5.jpg',
+                // disableOldIEMask: false
+            });
+
+
+            // var testTimeGapSeconds = 2;
+            // setTimeout(function () {
+            //     avatar.update('../images/_temp/fake-avatar-3.png');
+            // }, testTimeGapSeconds*1000);
+
+            // setTimeout(function () {
+            //     avatar.update('../images/_temp/fake-avatar-1.png');
+            // }, testTimeGapSeconds*2000);
+
+            // setTimeout(function () {
+            //     avatar.update('../images/_temp/fake-avatar-2.jpg', {
+            //         disableOldIEMask: true
+            //     });
+            // }, testTimeGapSeconds*3000);
+
+            // setTimeout(function () {
+            //     avatar.update('../images/_temp/fake-avatar-5.jpg');
+            // }, testTimeGapSeconds*4000);
+
+
+
+
+
+            function Avatar(avatarContainerElement, initOptions) {
+                if (!avatarContainerElement) return undefined;
+
+                var avatarElementClassName = 'avatar';
+                var avatarBordersElementClassName = 'avatar-borders';
+                var avatarIframeSrc = 'module-user-avatar.html';
+
+                initOptions = initOptions || {};
+
+                var isOldIE = typeof avatarContainerElement.filters === 'object'
+                    && navigator.userAgent.search(' MSIE 8.0') > 0
+                ;
+
+                var disableOldIEMaskDefault = !!initOptions.disableOldIEMask && isOldIE;
+
+                var avatarELement, avatarBordersElement, avatarIframeForOldIE;
+
+                this.update = function (imageUri, options) { update.call(this, imageUri, options); }
+
+
+
+
+                init.call(this);
+
+                if (typeof initOptions.imageUri === 'string' && initOptions.imageUri) {
+                    this.update(initOptions.imageUri);
+                }
+
+
+
+
+                function init() {
+                    avatarELement = $(avatarContainerElement).find('.'+avatarElementClassName)[0];
+                    avatarBordersElement = $(avatarContainerElement).find('.'+avatarBordersElementClassName)[0];
+
+                    if (!isOldIE) {
+                        if (!avatarELement) {
+                            // console.log('Creating avatarELement...');
+                            avatarELement = document.createElement('DIV');
+                            avatarELement.className = avatarElementClassName;
+                            avatarContainerElement.appendChild(avatarELement);
+                        }
+
+                        if (!avatarBordersElement) {
+                            // console.log('Creating avatarBordersElement...');
+                            avatarBordersElement = document.createElement('DIV');
+                            avatarBordersElement.className = avatarBordersElementClassName;
+                            avatarContainerElement.appendChild(avatarBordersElement);
+                        }
+
+                        return;
+                    }
+
+                    if (avatarELement) avatarELement.style.display = 'none';
+                    if (avatarBordersElement) avatarBordersElement.style.display = 'none';
+
+                    avatarIframeForOldIE = $(avatarContainerElement).find('iframe')[0];
+                    if (!avatarIframeForOldIE) {
+                        // console.log('Creating new iframe...');
+                        avatarIframeForOldIE = document.createElement('IFRAME');
+                        avatarIframeForOldIE.setAttribute('frameborder', '0');
+                        avatarIframeForOldIE.setAttribute('scrolling', 'no');
+                        avatarContainerElement.appendChild(avatarIframeForOldIE);
+                    }
+                }
+
+                function update(imageUri, options) {
+                    if (!isOldIE) {
+                        avatarELement.style.backgroundImage = 'url('+imageUri+')';
+                        return true;
+                    }
+
+                    if (!avatarIframeForOldIE) {
+                        return false;
+                    }
+
+                    avatarIframeForOldIE.style.width = '0'; // avoiding white flash
+
+                    options = options || {};
+
+                    var disableOldIEMask = disableOldIEMaskDefault;
+                    if (typeof options.disableOldIEMask !== 'undefined') {
+                        disableOldIEMask = !!options.disableOldIEMask && isOldIE;
+                    }
+                    // console.log('setting avatar to: "'+imageUri+'"\n\t      disableOldIEMask: ', disableOldIEMask, '\n');
+                    var newSrc = avatarIframeSrc
+                        +'?'+'avatarImage='+encodeURIComponent(imageUri)
+                        +'&'+'disableOldIEMask='+disableOldIEMask
+                    ;
+
+                    $(avatarIframeForOldIE).one('load', function (event) {
+                        avatarIframeForOldIE.style.width = '';
+                    });
+
+                    avatarIframeForOldIE.src = newSrc;
+
+                    return true;
+                }
+            }
+        })();
+    </script>
+</div>

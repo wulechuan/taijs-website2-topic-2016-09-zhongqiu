@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- inject:headBeforeTitle:html --><!-- endinject -->
+    <title>账单</title>
+    <!-- inject:headAfterTitle:html --><!-- endinject -->
+    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-layout.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-layout-ie8.min.css">
+    <![endif]-->
+</head>
+<body>
+<!-- inject:bodyBegin:html --><!-- endinject -->
+
+<!-- inject:appHeader:html --><!-- endinject -->
+
+<!-- inject:appBodyWrapBegin:html --><!-- endinject -->
+
+<!-- inject:xfzqUserInfoBar:html --><!-- endinject -->
+
+<!-- inject:xfzqPageWrapBegin:html --><!-- endinject -->
+
+<div role="breadcrumbs">
+    <nav class="breadcrumbs">
+        <ul>
+            <li><a href="http://wwwuat.taijs.com/">首页</a></li>
+            <li><a href="#">用户中心</a></li>
+            <li><a href="../index.html">泰有信</a></li>
+            <li><a href="../html/xfzq-bills-recent.html">账单</a></li>
+            <li><span>已出账单</span></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- inject:xfzqPageChiefPartWrapBegin:html --><!-- endinject -->
+
+<div class="content has-sidebar">
+    <script type="text/javascript">window.psn = { level1: 'taiyx', level2: 'bills-recent' };</script>
+    <!-- inject:xfzqPageSidebar0:html --><!-- endinject -->
+
+    <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
+    <div class="tab-panel-set">
+        <ul role="tablist" class="tab-list"
+            ><li role="tab"
+                          aria-controls="panel-issued-bills"
+                        aria-labelledby="panel-tab-issued-bills"
+                ><span class="label" id="panel-tab-issued-bills">已出账单</span
+            ></li
+            ><li role="tab"
+                          aria-controls="panel-awaiting-bills"
+                        aria-labelledby="panel-tab-awaiting-bills"
+                ><span class="label" id="panel-tab-awaiting-bills">未出账单</span
+            ></li
+            ><div class="current-item-hint"></div
+        ></ul>
+        <div class="panel-group">
+            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-issued-bills">
+                <div class="article">
+                    <article>
+                        <div class="bill-abstract-block" id="bill-issued-abstract-block">
+                            <div class="columns">
+                                <div class="col col-1" id="bill-issued-abstract-total">
+                                    <h5>剩余应还（元）<em>
+                                        <span class="value font-important">1,000.00</span>
+                                    </em></h5>
+                                    <blockquote>你可以在每月的15日15:00前申请按分期或快速还款</blockquote>
+                                </div>
+                                <div class="col col-2" id="bill-issued-abstract-last-month">
+                                    <h5><span class="last-month">2</span>月账单金额（元）
+                                        <span class="value font-important">3,524.00</span>
+                                    </h5>
+                                </div>
+                                <div class="col col-aside" id="bill-issued-abstract-summary">
+                                    <dl>
+                                        <dt>可用额度（元）</dt>
+                                        <dd class="credit-available-limitation" 
+                                            ><em class="thick-text-rendering"><span class="value">2,800.00</span></em
+                                        ></dd>
+
+                                        <dt>总额度（元）</dt>
+                                        <dd class="credit-total-limitaion" 
+                                            ><span class="value">5,200.00</span
+                                        ></dd>
+
+                                        <dt>还款日期</dt>
+                                        <dd class="last-payment-timestamp" 
+                                            ><time><span class="value">2016-05-15</span></time
+                                        ></dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div class="buttons-in-single-line"
+                                ><a role="button" class="rounded-corners size-std-regular"
+                                    href="../html/xfzq-quick-repayment-step-1-choose-bank-card.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="label">快速还款</span>
+                                </a
+
+                                ><a role="button" class="rounded-corners size-std-regular bg-transparent color-red"
+                                    href="../html/xfzq-create-installments-step-1-option.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="label">分期</span>
+                                </a
+                            ></div>
+                        </div>
+
+                        <div class="lists-block tabular-lists">
+                            <div class="block-header"><h2>已出账单明细</h2></div>
+
+                            <div class="empty-content-hint"></div>
+
+                            <div class="lists">
+                                <div class="tabular bill-records" id="issued-bill-records-abstract">
+                                    <ul class="f-list">
+                                        <li
+                                            ><span class="cell caption-cell value action">已还款</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">-300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">退款</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">-100.00</span
+                                        ></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tabular bill-records" id="issued-bill-records-others">
+                                    <div class="header"><h3>其他</h3></div>
+                                    <ul class="f-list">
+                                        <li
+                                            ><span class="cell caption-cell value action">欠款</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">逾期利息</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">分期</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">-100.00</span
+                                        ></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tabular bill-records" id="issued-bill-records-consumption">
+                                    <div class="header"><h3>账单明细（1.27-2.26的消费明细）</h3></div>
+                                    <ul class="f-list">
+                                        <li
+                                            ><span class="cell caption-cell value action">2016年01月账单分期3/3</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">100.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">2015年11月账单分期1/3</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">莱斯商场</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-22 12:11:01</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">200.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">1号店</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-10 07:01:21</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">1,258.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">1号店</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-09 11:38:27</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">莱斯商场</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-08 13:04:23</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">莱斯商场</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-06 16:23:37</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">本来生活</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-04 19:23:21</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">本来生活</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-02 14:02:37</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">本来生活</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-02 14:02:37</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pagination"
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=1" 
+                                        >
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">上一页</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=1" 
+                                         class="page-number">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">1</span>
+                                    </a
+                                    ><a role="button"
+                                        class="page-number current">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">2</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=3" 
+                                        class="page-number">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">3</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=4" 
+                                        >
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">下一页</span>
+                                    </a
+                                ></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="panel" aria-hidden="true" id="panel-awaiting-bills">
+                <div class="article">
+                    <article>
+                        <div class="bill-abstract-block" id="bill-awaiting-abstract-block">
+                            <div class="columns">
+                                <div class="col col-1" id="bill-awaiting-abstract-total">
+                                    <h5>剩余应还（元）<em>
+                                        <span class="value font-important">1,000.00</span>
+                                    </em></h5>
+                                    <blockquote>你可以在每月的15日15:00前申请按分期或快速还款</blockquote>
+                                </div>
+                                <div class="col col-aside" id="bill-awaiting-abstract-summary">
+                                    <dl>
+                                        <dt>可用额度（元）</dt>
+                                        <dd class="credit-available-limitation" 
+                                            ><em class="thick-text-rendering"><span class="value">2,800.00</span></em
+                                        ></dd>
+
+                                        <dt>总额度（元）</dt>
+                                        <dd class="credit-total-limitaion" 
+                                            ><span class="value">5,200.00</span
+                                        ></dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div class="buttons-in-single-line"
+                                ><a role="button" class="rounded-corners size-std-regular"
+                                    href="../html/xfzq-quick-repayment-step-1-choose-bank-card.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="label">快速还款</span>
+                                </a
+                            ></div>
+                        </div>
+
+                        <div class="lists-block tabular-lists">
+                            <div class="block-header">
+                                <h2>未出账单明细</h2>
+                            </div>
+
+                            <div class="empty-content-hint"></div>
+
+                            <div class="lists">
+                                <div class="tabular bill-records" id="awaiting-bill-records-abstract">
+                                    <ul class="f-list">
+                                        <li
+                                            ><span class="cell caption-cell value action">已还款</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">-300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">退款</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">-100.00</span
+                                        ></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tabular bill-records" id="awaiting-bill-records-consumption">
+                                    <div class="header"><h3>账单明细（1.27-2.26的消费明细）</h3></div>
+                                    <ul class="f-list">
+                                        <li
+                                            ><span class="cell caption-cell value action">2016年01月账单分期3/3</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">100.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">2015年11月账单分期1/3</span
+                                            ><span class="cell timestamp"><time class="value"></time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">莱斯商场</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-22 12:11:01</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">200.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">1号店</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-10 07:01:21</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">1,258.00</span
+                                        ></li>
+                                        <li
+                                            ><span class="cell caption-cell value action">莱斯商场</span
+                                            ><span class="cell timestamp"><time class="value">2016-02-08 13:04:23</time></span
+                                            ><span class="cell last-cell    value amount currency currency-rmb">300.00</span
+                                        ></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pagination"
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=1" 
+                                        >
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">上一页</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=1" 
+                                         class="page-number">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">1</span>
+                                    </a
+                                    ><a role="button"
+                                        class="page-number current">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">2</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=3" 
+                                        class="page-number">
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">3</span>
+                                    </a
+                                    ><a role="button" href="http://fake-url.com/sub-page?page=4" 
+                                        >
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="label">下一页</span>
+                                    </a
+                                ></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- inject:xfzqPageContentWrapEnd:html --><!-- endinject -->
+</div>
+
+<!-- inject:xfzqPageChiefPartWrapEnd:html --><!-- endinject -->
+
+<!-- inject:xfzqPageWrapEnd:html --><!-- endinject -->
+
+<!-- inject:appBodyWrapEnd:html --><!-- endinject -->
+
+<!-- inject:appFooter:html --><!-- endinject -->
+
+<!-- inject:popupLayersWrapBegin:html --><!-- endinject -->
+<!-- inject:popupLayersWrapEnd:html --><!-- endinject -->
+
+<!-- inject:bodyEnd:html --><!-- endinject -->
+<script src="../scripts/pages/xfzq-page-bills-recent.min.js"></script>
+</body></html>

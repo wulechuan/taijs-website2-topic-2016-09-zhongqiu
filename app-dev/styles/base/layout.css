@@ -1,0 +1,673 @@
+.row {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.width-wrap {
+	max-width: 1200px;
+	min-width: 1200px;
+}
+
+
+.card {
+	font-size: 14px;
+	display: block;
+	margin: 20px 0;
+	border-style: solid;
+	border-color: #ededed;
+	border-width: 1px;
+	}
+
+	.card .card-head,
+	.card .card-body {
+		position: relative;
+		border-style: inherit;
+		border-color: inherit;
+	}
+
+	.card .card-head {
+		border-width: 1px;
+		margin: -1px;
+		margin-bottom: 0;
+	}
+
+	.card .card-head .cell {
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+
+	.card .card-head .cell.caption-cell {
+		position: static;
+		display: inline;
+	}
+
+	.card .card-head .cell.last-cell {
+		position: absolute;
+		right: 20px;
+		top: 0.5em;
+		bottom: 0.5em;
+	}
+
+	.card .card-body {
+		border-width: 0;
+		margin: 0;
+	}
+
+	.card .cell {
+		display: block;
+		/* position: absolute; */
+		border-style: inherit;
+		border-color: inherit;
+	}
+
+	.card .cell.last-cell {
+		display: block;
+		position: absolute;
+		border-style: inherit;
+		border-color: inherit;
+	}
+
+.drop-down-list {
+	}
+
+	.drop-down-list .drop-down-list-options {
+		transition: none!important;
+		transform: scaleY(1) translate(0,0);
+		animation: menu-scales-up 0.22s;
+	    animation-timing-function: cubic-bezier(.19,1.08,.63,1.36);
+	}
+
+	.drop-down-list.choose-bank .drop-down-list-option {
+		display: block;
+		padding: 11px 20px;
+		min-height: 47px;
+		line-height: 25px;
+		}
+		.drop-down-list.choose-bank .drop-down-list-option .icon {
+			vertical-align: middle;
+			margin-top: -5px;
+			margin-right: 0.5em;
+		}
+
+
+#app-header {
+	position: relative;
+	z-index: 9;
+}
+
+#app-footer {
+	position: relative;
+	z-index: 8;
+}
+
+#app-body {
+	position: relative;
+	z-index: 1;
+}
+
+#app-body {
+	display: block;
+}
+
+
+#app-header {
+	}
+
+	#app-header-info-and-links {
+		font-size: 12px;
+		border-bottom: 1px solid;
+		z-index: 2; /* for qrcode floating layers */
+		}
+
+		#app-header-info-and-links button {
+			margin: 0;
+			padding: 0 0.5em;
+			white-space: nowrap;
+		}
+
+		#app-header-info-and-links button .iconfont ~ .label {
+			margin-left: 0;
+			padding-left: 0.5em;
+		}
+
+		#app-header-info-and-links a:hover {
+			text-decoration: none;
+		}
+
+		#app-header-info-and-links .iconfont {
+			font-size: 21px;
+			width: 21px;
+			vertical-align: top;
+			margin: 0;
+		}
+
+		#app-header-info-and-links .mobile-app button {
+			padding-left: 0.4em; /* the icon is very thin/narrow */
+		}
+
+		#app-header-info-and-links .mobile-app button .iconfont {
+			width: 0.7em; /* the icon is very thin/narrow */
+		}
+
+		#app-header-info-and-links .mobile-app button > .label {
+			padding-left: 0.2em; /* the icon is very thin/narrow */
+		}
+
+		#app-header-info-and-links .sns .label {
+			margin-left: 0;
+			display: none;
+		}
+
+		#app-header-info-and-links .sns .weixin .floating-layer-set .locator::before {
+			width: 60px;
+			margin-left: -30px;
+		}
+		#app-header-info-and-links .sns .weixin .floating-layer .columns {
+			margin: -5px;
+		}
+		#app-header-info-and-links .sns .weixin .floating-layer .col {
+			padding: 5px;
+		}
+
+		#app-header-contacts,
+		#app-header-user-account-commands {
+			vertical-align: top;
+			display: inline-block;
+			position: relative;
+			width: 50%;
+			line-height: 35px;
+		}
+
+		#app-header-contacts {
+			left: -10px;
+		}
+		#app-header-user-account-commands {
+			right: -10px;
+		}
+		#app-header-contacts .toolbar > li,
+		#app-header-user-account-commands .toolbar > li {
+			padding: 0 10px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		#app-header-contacts button,
+		#app-header-contacts span,
+		#app-header-contacts a,
+		#app-header-user-account-commands .menu.level-1 > .menu-item > .label,
+		#app-header-user-account-commands button,
+		#app-header-user-account-commands span,
+		#app-header-user-account-commands a {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 10px;
+			margin: 0 -10px;
+		}
+		#app-header-user-account-commands .menu.level-1 > .menu-item:before {
+			content: none;
+		}
+		#app-header-user-account-commands .menu.level-1 > .menu-item > a > .label {
+			vertical-align: top;
+			padding: 0;
+			margin: 0;
+		}
+
+		#app-header-user-account-commands {
+			text-align: right;
+			}
+
+			#app-header-user-account-commands .user-known,
+			#app-header-user-account-commands.user-has-logged-in .user-guest {
+				display: none;
+			}
+			#app-header-user-account-commands.user-has-logged-in .user-known {
+				display: inline-block;
+			}
+
+
+
+
+
+	#app-header-chief-bar {
+		border-bottom: 1px solid;
+		}
+
+		#app-header-chief-bar > .width-wrap {
+			height: 72px;
+		}
+
+		#taijs-logo {
+			display: inline-block;
+			vertical-align: top;
+			padding: 11px;
+			margin: 0 11px 0 -11px;
+		}
+
+		#app-header-chief-bar > .width-wrap > .docking {
+			height: 100%;
+			padding: 0 10px;
+			margin-right: -10px;
+			z-index: 5;
+		}
+
+		#search-box, #my-assets {
+			text-align: left;
+		}
+
+		#search-box {
+			width: 140px;
+		}
+
+
+#app-footer {
+	display: block;
+	}
+
+	#app-footer > footer,
+	#app-footer .row,
+	#app-footer .width-wrap,
+	#app-footer .content,
+	#app-footer .col {
+		border-color: inherit;
+	}
+
+
+	#app-footer a {
+		display: inline-block;
+		padding: 6px;
+		margin: 0 -6px;
+	}
+
+	#app-footer a,
+	#app-footer a:hover {
+		text-decoration: none;
+	}
+
+	#app-footer-chief-bar {
+		position: relative;
+		border-top: 1px solid;
+		}
+
+		#app-footer-chief-bar .content {
+			padding: 36px 0 16px 0;
+		}
+
+		#app-footer-chief-bar .content .col {
+			box-sizing: border-box;
+		}
+
+		#app-footer-chief-bar .content > .col {
+			min-height: 148px;
+			min-width: 25%;
+		}
+
+		#app-footer-chief-bar .content > .col.col-1 {
+			width: 328px;
+			margin-bottom: -10px;
+		}
+
+		#app-footer-chief-bar .content > .col.col-3 {
+			width: 328px;
+		}
+
+		#app-footer-chief-bar .content > .col.col-2 {
+			width: 544px;
+			border-width: 0 1px;
+			border-style: solid;
+		}
+
+		#app-footer-nav {
+			font-size: 12px;
+			}
+
+			#app-footer-nav h2 {
+				font-size: 16px;
+				padding: 8px;
+				margin: -8px -8px 8px -8px;
+			}
+
+			#app-footer-nav h2 a {
+				padding: 8px;
+				margin: -8px;
+			}
+
+			#app-footer-nav a {
+				margin-top: 1px;
+				margin-bottom: 1px;
+			}
+
+			#app-footer-nav .col {
+				width: 102px;
+				padding-right: 24px;
+			}
+
+		#app-footer-qrcodes {
+			text-align: center;
+			}
+
+			#app-footer-qrcodes .columns > .col {
+				width: 147px;
+				border-top: 1px solid transparent;
+				text-align: center;
+			}
+
+			#app-footer-qrcodes .qrcode > img {
+				width: 128px;
+				height: 128px;
+				margin: -3px;
+			}
+			#app-footer-qrcodes .qrcode .figcaption {
+				margin-bottom: -10px;
+			}
+
+		#app-footer-services-info {
+			font-size: 12px;
+			text-align: right;
+			}
+
+			#app-footer-services-info > ul {
+				text-align: left;
+				display: inline-block;
+				right: 0;
+			}
+
+			#app-footer-services-info > ul > li {
+				position: relative;
+				padding: 5px 5px 5px 35px;
+				line-height: 37px;
+				margin: -5px;
+			}
+
+			#app-footer-services-info .iconfont {
+				font-size: 20px;
+				position: absolute;
+				left: 5px;
+				top: 5px;
+				margin: 2px 0 0 0;
+				margin-top: -1px\0;
+			}
+
+			:root #app-footer-services-info .iconfont {
+				margin-top: 1px\0;
+			}
+
+			#app-footer-services-info em {
+				font-size: 18px;
+			}
+
+			#app-footer-services-info p {
+			}
+
+			#app-footer-services-info p a {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			#app-footer-services-info p > em,
+			#app-footer-services-info p > span,
+			#app-footer-services-info p > .list-label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+
+			#app-footer-services-info p > .list-label {
+				width: 60px;
+				margin-right: 6px;
+			}
+
+			#app-footer-services-info p > .list-label:after {
+				content: '：';
+			}
+
+
+	#app-footer-copyright-bar {
+		min-height: 92px;
+		border-top: 1px solid;
+		text-align: center;
+		}
+
+		#app-footer-copyright {
+			margin-top: 18px;
+			font-size: 12px;
+			line-height: 1;
+		}
+
+		#app-footer-attestations {
+			margin-top: 20px;
+			}
+
+			#app-footer-attestations > a,
+			#app-footer-attestations .attestation-logo {
+				display: inline-block;
+				padding: 0;
+				height: 28px;
+				position: relative;
+				vertical-align: top;
+				margin: 0 12px;
+			}
+			#app-footer-attestations .attestation-logo {
+				background-repeat: no-repeat;
+				background-image: url(../../images/_common/attestation-logos.png);
+			}
+			#app-footer-attestations > a .attestation-logo {
+				position: static;
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+
+			#app-footer-attestations .attestation-logo.cheng-xin-wang-zhan {
+				width: 78px;
+				background-position: 0 0;
+			}
+			#app-footer-attestations .attestation-logo.cheng-xin-wang-zhan:hover {
+				background-position: 0 -28px;
+			}
+			#app-footer-attestations .attestation-logo.ke-xin-wang-zhan {
+				width: 76px;
+				background-position: -88px 0;
+			}
+			#app-footer-attestations .attestation-logo.ke-xin-wang-zhan:hover {
+				background-position: -88px -28px;
+			}
+			#app-footer-attestations .attestation-logo.guan-wang-yan-zheng-an-quan-lian-meng {
+				width: 75px;
+				background-position: -174px 0;
+			}
+			#app-footer-attestations .attestation-logo.guan-wang-yan-zheng-an-quan-lian-meng:hover {
+				background-position: -174px -28px;
+			}
+
+
+#app-chief-nav .menu.level-2,
+#app-chief-nav .menu.level-1 > .menu-item > .deco,
+
+#my-assets .menu.level-2,
+#my-assets .menu.level-1 > .menu-item > .deco {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.147);
+	}
+
+
+#app-chief-nav {
+	margin: 0 0 0 137px;
+	padding: 11px 11px;
+	display: inline-block;
+	vertical-align: top;
+	}
+
+	#app-chief-nav .menu-item > a > .label,
+	#app-chief-nav .menu-item     > .label {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#app-chief-nav .menu.level-1 {
+		font-size: 16px;
+		margin: 0;
+		height: 50px;
+		}
+
+		#app-chief-nav .menu.level-1 > .menu-item {
+			max-width: 200px; /* just for safety */
+		}
+
+		#app-chief-nav .menu.level-1 > .menu-item > a > .label,
+		#app-chief-nav .menu.level-1 > .menu-item     > .label {
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+
+		#app-chief-nav .menu.level-1 > .menu-item > .deco {
+			border-width: 1px;
+			border-style: solid;
+			box-sizing: border-box;
+			background-color: white;
+			width: 100%;
+			height: 42px;
+			left: 0;
+			top: 0;
+			clip: rect(-9px, 200px, 41px, -9px);
+		}
+
+
+	#app-chief-nav .menu-wrap.level-2 {
+		left: 0;
+		top: 100%;
+		margin-top: -10px; 
+		padding: 0;
+		width: 100%;
+		}
+
+		#app-chief-nav .menu-wrap.level-2 .border-patch {
+			display: block;
+			position: absolute;
+			left: 0px;
+			right: 14px;
+			top: -10px;
+			height: 13px;
+			background-color: white;
+			z-index: 10;
+		}
+
+		#app-chief-nav .menu.level-2 {
+			font-size: 14px;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			padding: 8px 0;
+
+			box-sizing: content-box;
+			border-width: 1px;
+			border-style: solid;
+			padding-right: 12px;
+		}
+		#app-chief-nav .menu.level-2 > .menu-item {
+			margin-right: -12px;
+		}
+
+		#app-chief-nav .menu.level-2 > .menu-item > a > .label,
+		#app-chief-nav .menu.level-2 > .menu-item     > .label {
+			padding-top: 7px;
+			padding-bottom: 7px;
+
+			padding-left: 19px;  /* level 2 menu has borders */
+			padding-right: 19px; /* level 2 menu has borders */
+		}
+
+
+#my-assets {
+	margin-left: 10px;
+	}
+
+	#my-assets .menu.level-1 {
+		box-sizing: border-box;
+		display: block;
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item {
+		width: 118px;
+		height: 34px; /* for firefox */
+	}
+
+	#my-assets .menu.level-1 > .menu-item > a > .label,
+	#my-assets .menu.level-1 > .menu-item     > .label {
+		font-size: 12px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > a > .label .iconfont,
+	#my-assets .menu.level-1 > .menu-item     > .label .iconfont {
+		margin: 0 8px 0 2px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .sub-menu-hint,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .sub-menu-hint,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .label:after {
+		font-size: 16px;
+		right: 6px;
+	}
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .sub-menu-hint:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .label:after {
+		content: '\e610';
+	}
+
+	#my-assets .menu.level-2,
+	#my-assets .menu.level-1 > .menu-item > .deco {
+		border-width: 1px;
+		border-style: solid;
+		right: -1px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > .deco {
+		box-sizing: border-box;
+		left: -1px;
+		top: -1px;
+		height: 38px;
+		z-index: 1;
+		clip: rect(-9px, 200px, 36px, -9px);
+	}
+
+	#my-assets .menu-wrap.level-2 {
+		font-size: 14px;
+		right: 0;
+		top: 100%;
+		margin: 0;
+		margin: 0 0px; 
+		padding: 0;
+		width: 322px; /* make some room for the sub-menu auto width */
+		}
+
+	#my-assets .menu.level-2 .border-patch {
+		/* using standalone div for patching because ie8 ":before" element can not cover inner div elements, such as .ie-shadow; */
+		display: block;
+		position: absolute;
+		z-index: 4;
+		background-color: white;
+		width: 118px;
+		height: 13px;
+		right: 0;
+		top: -10px;
+	}
+
+	#my-assets .menu.level-2 {
+		position: absolute;
+		padding: 8px 0;
+		min-width: 144px;
+
+		transition: none!important;
+		transform-origin: right top;
+		}
+
+		#my-assets .menu.level-1 > .menu-item:hover .menu.level-2 {
+			transform: scaleY(1) translate(0,0);
+			animation: menu-scales-up-and-slides 0.2s ease-out;
+		}
+
+		#my-assets .menu.level-2 > .menu-item > a > .label,
+		#my-assets .menu.level-2 > .menu-item     > .label {
+			padding: 8px 19px;
+		}

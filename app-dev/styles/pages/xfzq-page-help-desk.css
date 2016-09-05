@@ -1,0 +1,229 @@
+
+/* ----- layout definition begin --------------- */
+	.tile {
+		height: 311px;
+		text-align: center;
+		}
+
+		.tile > .content {
+			display: inline-block;
+			vertical-align: middle;
+			background-color: transparent;
+			}
+
+			.tile > .content .icon {
+				width: 60px;
+				height: 48px;
+				line-height: 48px;
+				font-size: 40px;
+				}
+				.tile > .content.help-category-bank-card .icon {
+					font-size: 50px;
+				}
+
+			.tile > .content label {
+				display: block;
+				margin: 12px 0;
+			}
+
+	.help-category-new-user-guide .icon.icon-in-bg { background-position: 0px 0px; }
+	.help-category-faq            .icon.icon-in-bg { background-position: -60px 0px; }
+	.help-category-account        .icon.icon-in-bg { background-position: -120px 0px; }
+	.help-category-funds          .icon.icon-in-bg { background-position: -180px 0px; }
+	.help-category-bank-card      .icon.icon-in-bg { background-position: -240px 0px; }
+	.help-category-taiyx          .icon.icon-in-bg { background-position: -300px 0px; }
+	.help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px 0px; }
+	.help-category-funds-venture  .icon.icon-in-bg { background-position: -420px 0px; }
+	.help-category-services       .icon.icon-in-bg { background-position: -480px 0px; }
+
+	/* firefox does NOT support transition background-position-x or y but does support background-position as a whole */
+	.icon-hover-trigger:hover .help-category-new-user-guide .icon.icon-in-bg { background-position: 0px -60px; }
+	.icon-hover-trigger:hover .help-category-faq            .icon.icon-in-bg { background-position: -60px -60px; }
+	.icon-hover-trigger:hover .help-category-account        .icon.icon-in-bg { background-position: -120px -60px; }
+	.icon-hover-trigger:hover .help-category-funds          .icon.icon-in-bg { background-position: -180px -60px; }
+	.icon-hover-trigger:hover .help-category-bank-card      .icon.icon-in-bg { background-position: -240px -60px; }
+	.icon-hover-trigger:hover .help-category-taiyx          .icon.icon-in-bg { background-position: -300px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-venture  .icon.icon-in-bg { background-position: -420px -60px; }
+	.icon-hover-trigger:hover .help-category-services       .icon.icon-in-bg { background-position: -480px -60px; }
+
+
+
+	.article.qna-list {
+		font-size: 24px;
+		}
+
+		.article.qna-list .title,
+		.article.qna-list dl.qna {
+			padding-left: 30px;
+			padding-right: 30px;
+			}
+			.article.qna-list dl.qna dt .content {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+
+		.article.qna-list .title {
+			padding-top: 21px;
+			padding-bottom: 21px;
+		}
+		.article.qna-list dl.qna {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.article.qna-list .title h2 {
+			font-size: 16px;
+			line-height: 24px;
+			padding: 8px;
+			margin: -8px;
+		}
+
+		.article.qna-list dl.qna {
+			font-size: 14px;
+			padding-bottom: 2em;
+			border-style: dashed;
+			}
+
+			.article.qna-list dl.qna dd .content,
+			.article.qna-list dl.qna dt .content {
+				padding-right: 30px;
+				padding-top: 20px;
+			}
+			.article.qna-list dl.qna dt .content {
+				padding-left: 63px;
+				padding-bottom: 20px;
+			}
+			.article.qna-list dl.qna dd .content {
+				padding-left: 33px;
+				padding-bottom: 5em;
+			}
+
+			.article.qna-list dl.qna dd .content,
+			.article.qna-list dl.qna dt {
+				border-width: 0 0 1px 0;
+			}
+			.article.qna-list dl.qna .content-mark { /* content marks are for non-css environments, and are hidden by css by default. */
+				display: none;
+			}
+			.article.qna-list dl.qna dt {
+				line-height: 26px;
+			}
+			.article.qna-list dl.qna dd {
+				line-height: 25px;
+			}
+
+
+			.article.qna-list dl.qna dd p {
+				margin: -0.5em;
+				margin-bottom: 0.5em;
+			}
+
+			/* ie8 ignores z-indices of :before :after, so we have to use :before as the bg symbol while using :after showing the Q/A letters. */
+			.article.qna-list dl.qna dt > .content:before,
+			.article.qna-list dl.qna dt > .content:after,
+			.article.qna-list dl.qna dd > .content:before,
+			.article.qna-list dl.qna dd > .content:after {
+				display: block;
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				top: 20px;
+			}
+			.article.qna-list dl.qna dt > .content:before,
+			.article.qna-list dl.qna dt > .content:after {
+				left: 30px;
+			}
+			.article.qna-list dl.qna dd > .content:before,
+			.article.qna-list dl.qna dd > .content:after {
+				left: 0;
+			}
+			.article.qna-list dl.qna dt > .content:after,
+			.article.qna-list dl.qna dd > .content:after {
+				font-size: 14px;
+				line-height: 25px;
+			}
+			.article.qna-list dl.qna dt > .content:before,
+			.article.qna-list dl.qna dd > .content:before {
+				font-family: 'iconfont'!important;
+				font-size: 24px;
+				text-indent: 0;
+				line-height: 27px;
+			}
+			.article.qna-list dl.qna dt > .content:after {
+				content: 'Q';
+				text-indent: 3px;
+			}
+			.article.qna-list dl.qna dd > .content:after {
+				content: 'A';
+				text-indent: 4px;
+			}
+			.article.qna-list dl.qna dt > .content:before {
+				content: '\e62e';
+				text-shadow: none;
+			}
+			.article.qna-list dl.qna dd > .content:before {
+				content: '\e62e';
+				text-shadow: none;
+			}
+/* ----- layout definition end ----------------- */
+
+
+
+
+/* ----- theme definition begin ---------------- */
+	.tiles > a,
+	.tiles {
+		color: #666;
+		}
+
+		.tiles > a:hover {
+			color: #157dff;
+		}
+
+		.tile.odd {
+			background-color: #f4f6f7;
+		}
+		/* :nth-child will cause ie8 css failure; */
+		/* .tile:nth-child(odd) {
+			background-color: #f4f6f7;
+		} */
+
+	.article.qna-list {
+		}
+
+		.article.qna-list .title {
+			background-color: #fbfbfc;
+		}
+
+		.article.qna-list .title h2 {
+		}
+
+		.article.qna-list dl.qna {
+			border-color: #ededed;
+			}
+
+			.article.qna-list dl.qna dt {
+				color: #000;
+			}
+			.article.qna-list dl.qna dt > .content:hover {
+				background-color: #f4f6f7;
+			}
+			.article.qna-list dl.qna dd {
+				color: #333;
+				/* text-shadow: 0 0 1px rgba(33, 33, 33, 0.5);
+				text-shadow: 0 0 1.5px rgba(33, 33, 33, 0.5)\9\0; */ /* ie10, ie11 */
+			}
+			.article.qna-list dl.qna dt > .content:after {
+				color: white;
+			}
+			.article.qna-list dl.qna dd > .content:after {
+				color: white;
+			}
+			.article.qna-list dl.qna dt > .content:before {
+				color: #fc8510;
+			}
+			.article.qna-list dl.qna dd > .content:before {
+				color: #19c144;
+			}
+/* ----- theme definition end ------------------ */
