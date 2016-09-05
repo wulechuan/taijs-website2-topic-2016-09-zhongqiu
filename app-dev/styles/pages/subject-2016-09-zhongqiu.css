@@ -12,6 +12,22 @@
 		font-size: 58%;
 	}
 
+	#sub-2016-09-zq a, a:link {
+		text-decoration: none;
+		}
+
+		#sub-2016-09-zq a:link {
+			cursor: pointer;
+		}
+
+		#sub-2016-09-zq a:hover {
+			text-decoration: underline;
+		}
+
+		#sub-2016-09-zq a.button, a.button:hover {
+			text-decoration: none;
+		}
+
 	#sub-2016-09-zq .image-backup-text {
 		position: absolute;
 		z-index: -1;
@@ -41,6 +57,7 @@
 		}
 
 	#sub-2016-09-zq .f-list {
+		padding: 0;
 		}
 		#sub-2016-09-zq .f-list > li {
 			list-style: none;
@@ -62,6 +79,30 @@
 				text-align: left;
 			}
 
+	#sub-2016-09-zq .row {
+		position: relative;
+		display: block;
+		clear: both;
+		float: none;
+		padding-top: 0!important;
+		padding-bottom: 0!important;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#sub-2016-09-zq .width-wrap {
+		box-sizing: content-box;
+		position: relative;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
+		float: none;
+		z-index: 1;
+		padding: 0;
+		max-width: 1200px;
+		min-width: 1200px;
+	}
 
 
 #sub-2016-09-zq #splash-block {
@@ -484,13 +525,23 @@
 		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image:hover {
 			background-position: 0 -55px;
 		}
-		#sub-2016-09-zq .section .article  button.call-to-action.has-bg-image:disabled,
-		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image[disabled] {
+		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image.disabled {
+			background-position: 100% 0!important;
+		}
+		#sub-2016-09-zq .section .article  button.call-to-action.has-bg-image:disabled {
 			background-position: 100% 0;
 		}
-		#sub-2016-09-zq .section .article  button.call-to-action.has-bg-image:disabled:hover,
-		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image[disabled]:hover {
+		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image.disabled:hover {
+			background-position: 100% -55px!important;
+		}
+		#sub-2016-09-zq .section .article  button.call-to-action.has-bg-image:disabled:hover {
 			background-position: 100% -55px;
+		}
+		#sub-2016-09-zq .section .article .button.disabled {
+			color: #ddd!important;
+		}
+		#sub-2016-09-zq .section .article  button:disabled {
+			color: #ddd!important;
 		}
 
 
@@ -703,6 +754,12 @@
 	}
 	#sub-2016-09-zq .progress-bar .current-progress .ie8-deco:before {
 		content: '▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌';
+	}
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {    
+	   /* IE10-specific styles go here */    
+		:root #sub-2016-09-zq .progress-bar .current-progress .ie8-deco {
+			display: none;
+		}
 	}
 
 	#sub-2016-09-zq .progress-bar .current-progress::before {
