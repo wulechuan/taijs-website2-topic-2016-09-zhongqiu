@@ -6,6 +6,9 @@
 	#sub-2016-09-zq em {
 		color: #ffeeb0;
 	}
+	#sub-2016-09-zq .article sub {
+		font-size: 58%;
+	}
 
 	#sub-2016-09-zq .image-backup-text {
 		position: absolute;
@@ -42,10 +45,15 @@
 			display: inline-block;
 			padding: 0;
 			margin: 0;
+			position: relative;
 			}
 			#sub-2016-09-zq .f-list.columns.columns-count-2 > li {
 				width: 50%;
 				text-align: center;
+			}
+			#sub-2016-09-zq .f-list.columns.columns-count-3 > li {
+				width: 33.33%;
+				text-align: left;
 			}
 
 
@@ -350,11 +358,20 @@
 			margin: 20px auto;
 		}
 		#sub-2016-09-zq .section .article h3 {
-			font-size: 20px;
-			font-weight: 500;
+			font-size: 26px;
+			font-weight: 200;
 			margin: 20px 0;
 		}
-		#sub-2016-09-zq .section .article h3.first {
+		#sub-2016-09-zq .section .article h3 sub {
+			font-size: 68%;
+			font-weight: 300;
+		}
+		#sub-2016-09-zq .section#zhongqiu-section-1 .article h3 {
+			font-size: 20px;
+			font-weight: 500;
+		}
+		#sub-2016-09-zq .section .article h3.first,
+		#sub-2016-09-zq .section .article h3:first-child {
 			margin-top: 0;
 		}
 
@@ -461,3 +478,49 @@
 			right: -83px;
 			bottom: -15px;
 		}
+
+
+#sub-2016-09-zq #zhongqiu-section-2 .aside-deco {
+	position: absolute;
+	margin: 0;
+	}
+	#sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern {
+		left: auto;
+		right: -97px;
+		right: -98px\0;
+		top: 79px;
+		width: 213px;
+		height: 208px;
+	}
+	:root #sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern {
+		right: -97px\0;
+	}
+	#sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern .symbol {
+	}
+	#sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern .symbol .symbol-look.bg {
+		background-image: url(../../images/pages/subject-2016-09-zhongqiu/section-2-lantern-aside.jpg);
+	}
+
+
+#sub-2016-09-zq .f-list.product-abstract {
+	margin: 0 45px;
+	}
+	#sub-2016-09-zq .product-abstract em {
+		color: #ef5426;
+	}
+	#sub-2016-09-zq .f-list.product-abstract .col > .label {
+		font-size: 22px;
+		line-height: 1;
+	}
+	#sub-2016-09-zq .f-list.product-abstract .col > .content {
+		font-size: 46px;
+		line-height: 1;
+	}
+	#sub-2016-09-zq .f-list.product-abstract.labels-at-bottom .col {
+		padding-bottom: 40px;
+	}
+	#sub-2016-09-zq .f-list.product-abstract.labels-at-bottom .col > .label {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
