@@ -890,15 +890,38 @@
 		display: block;
 		width: 120px;
 		height: 120px;
-		background-color: #ef5426;
 		position: fixed;
 		right: 50px;
 		top: 25%;
 		margin: 96px 5px 0 0;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
-		background-size: 100px 100px;
+		background-color: #ef5426;
+	}
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image {
+		z-index: 3;
+		position: absolute;
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		left: 0;
+		top: 0;
+		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
+		-webkit-transform-origin: left top;
+		        transform-origin: left top;
+		    -ms-transform-origin: left top;
+
+	    -ms-filter: "\
+	    	progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+			    src='../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png',\
+			    sizingMethod='scale'\
+			)\
+		";
+	}
+	:root #sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image {
+	    filter: none;
 	}
 	#sub-2016-09-zq .aside.floating-qrcode .label {
 		display: block;
@@ -914,7 +937,10 @@
 		line-height: 1.4;
 	}
 
+
+
 	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-locator,
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image,
 	#sub-2016-09-zq .aside.floating-qrcode .qrcode {
 		-webkit-transition-property: all;
 		        transition-property: all;
@@ -930,16 +956,65 @@
 			background-size: 200px 200px;
 			box-shadow: 0 0 19px 1px rgba(0, 0, 0, 0.51);
 		}
-		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode::before {
+		#sub-2016-09-zq .aside.floating-qrcode .qrcode-ie8-shadow {
+			display: none;
+			position: fixed;
+			width: 240px;
+			height: 240px;
+			top: 25%;
+			right: 50%;
+			margin-right: -133px;
+			margin-top: 38px;
+			background-color: black;
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=45)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
+			";
+		}
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+			display: block\0;
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+			display: none\0;
+		}
+
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+			width: 200px\0;
+			height: 200px\0;
+			margin: 20px\0;
+			-webkit-transform: translate(10px, 10px) scale(2.0, 2.0);
+			        transform: translate(10px, 10px) scale(2.0, 2.0);
+			    -ms-transform: translate(10px, 10px) scale(2.0, 2.0);
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+			width: 100px\0;
+			height: 100px\0;
+			margin: 10px\0;
+		}
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
 			content: '';
 			position: fixed;
-			width: auto;
 			height: 240px;
+			background-color: transparent!important;
+
+			width: auto;
 			left: 50%;
 			right: 50px;
 			top: 25%;
-			margin-top: 51px;
-			background-color: transparent;
+			margin: 51px 0 0 0;
+
+			width: 50%\0;
+			left: 0\0;
+			top: 0\0;
+			margin: 0\0;
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
+			width: auto\0;
+			left: 50%\0;
+			right: 50px\0;
+			top: 25%\0;
+			margin: 51px 0 0 0\0;
 		}
 		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-locator.benbaobao {
 			right: 50%;
