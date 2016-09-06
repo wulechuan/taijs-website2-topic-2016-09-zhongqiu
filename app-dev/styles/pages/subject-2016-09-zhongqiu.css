@@ -24,7 +24,8 @@
 			text-decoration: underline;
 		}
 
-		#sub-2016-09-zq a.button, a.button:hover {
+		#sub-2016-09-zq a.button,
+		#sub-2016-09-zq a.button:hover {
 			text-decoration: none;
 		}
 
@@ -179,7 +180,7 @@
 				background-image: url(../../images/pages/subject-2016-09-zhongqiu/lanterns.png);
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.dark {
 				z-index: 1;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.lit {
@@ -252,7 +253,7 @@
 				to  { opacity: 0.66; }
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.dark {
 				display: block;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.lit {
@@ -266,7 +267,7 @@
 				        transition-duration: 0.24s;
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.dark {
 				display: block;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.lit {
@@ -282,26 +283,26 @@
 				opacity: 1;
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.dark {
+				background-position:    0px    0px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px    0px;
 			}
-			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.dark {
+				background-position:    0px -230px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px -230px;
 			}
-			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.dark {
+				background-position:    0px -460px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px -460px;
 			}
 
 
@@ -323,6 +324,7 @@
 
 	#sub-2016-09-zq #splash-block .floating-panel  button,
 	#sub-2016-09-zq #splash-block .floating-panel .button {
+		position: relative;
 		margin: 0 auto;
 		display: block;
 		width: 250px;
@@ -333,11 +335,47 @@
 		border-radius: 2px;
 		font-size: 22px;
 		line-height: 22px;
+		overflow: hidden;
+		-webkit-transition: all 0.25s ease-out;
+		        transition: all 0.25s ease-out;
 		}
 		#sub-2016-09-zq #splash-block .floating-panel  button:hover,
 		#sub-2016-09-zq #splash-block .floating-panel .button:hover {
-			background-color: #fb686a;
-			border-color: #fb686a;
+			background-color: #dd3338;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button .label,
+		#sub-2016-09-zq #splash-block .floating-panel .button .label {
+			position: relative;
+			z-index: 1;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button::before,
+		#sub-2016-09-zq #splash-block .floating-panel .button::before {
+			z-index: 0;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 50%;
+			margin-left: -10px;
+			top: 392px;
+			border-radius: 1000px;
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow:
+				0 0 16px 350px rgba(255, 255, 255, 0.45),
+				0 0 16px 370px rgba(64, 0, 0, 0.08)
+			;
+			opacity: 1;
+			-webkit-transition: all 0.24s ease-out;
+			        transition: all 0.24s ease-out;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button:hover::before,
+		#sub-2016-09-zq #splash-block .floating-panel .button:hover::before {
+			opacity: 1;
+			box-shadow:
+				0 0 18px 352px rgba(255, 255, 255, 0.79),
+				0 0 48px 385px rgba(64, 0, 0, 0.16)
+			;
 		}
 		#sub-2016-09-zq #splash-block .floating-panel .hero-content {
 			font-weight: 400;
