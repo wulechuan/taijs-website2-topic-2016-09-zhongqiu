@@ -24,7 +24,8 @@
 			text-decoration: underline;
 		}
 
-		#sub-2016-09-zq a.button, a.button:hover {
+		#sub-2016-09-zq a.button,
+		#sub-2016-09-zq a.button:hover {
 			text-decoration: none;
 		}
 
@@ -179,7 +180,7 @@
 				background-image: url(../../images/pages/subject-2016-09-zhongqiu/lanterns.png);
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.dark {
 				z-index: 1;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.lit {
@@ -252,7 +253,7 @@
 				to  { opacity: 0.66; }
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.dark {
 				display: block;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern .symbol .symbol-look.lit {
@@ -266,7 +267,7 @@
 				        transition-duration: 0.24s;
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.drak {
+			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.dark {
 				display: block;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern.lit .symbol .symbol-look.lit {
@@ -282,26 +283,26 @@
 				opacity: 1;
 			}
 
-			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.dark {
+				background-position:    0px    0px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-1 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px    0px;
 			}
-			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.dark {
+				background-position:    0px -230px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-2 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px -230px;
 			}
-			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.drak {
-				background-position:    0px   0px;
+			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.dark {
+				background-position:    0px -460px;
 			}
 			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.lit2,
 			#sub-2016-09-zq #splash-block .lanterns .lantern-3 .symbol .symbol-look.lit {
-				background-position: -150px   0px;
+				background-position: -150px -460px;
 			}
 
 
@@ -323,9 +324,12 @@
 
 	#sub-2016-09-zq #splash-block .floating-panel  button,
 	#sub-2016-09-zq #splash-block .floating-panel .button {
+		position: relative;
 		margin: 0 auto;
 		display: block;
 		width: 250px;
+		border-width: 1px;
+		border-style: solid;
 		padding: 11px 15px;
 		color: white;
 		background-color: #f44b4e;
@@ -333,11 +337,48 @@
 		border-radius: 2px;
 		font-size: 22px;
 		line-height: 22px;
+		overflow: hidden;
+		-webkit-transition: all 0.25s ease-out;
+		        transition: all 0.25s ease-out;
 		}
 		#sub-2016-09-zq #splash-block .floating-panel  button:hover,
 		#sub-2016-09-zq #splash-block .floating-panel .button:hover {
-			background-color: #fb686a;
-			border-color: #fb686a;
+			background-color: #dd3338;
+			border-color: #d55 #c66 #e88 #c66;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button .label,
+		#sub-2016-09-zq #splash-block .floating-panel .button .label {
+			position: relative;
+			z-index: 1;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button::before,
+		#sub-2016-09-zq #splash-block .floating-panel .button::before {
+			z-index: 0;
+			content: '';
+			display: block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			left: 50%;
+			margin-left: -20px;
+			top: 592px;
+			border-radius: 1000px;
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow:
+				0 0 5px 550px rgba(255, 255, 255, 0.31),
+				0 0 16px 570px rgba(64, 0, 0, 0.08)
+			;
+			opacity: 1;
+			-webkit-transition: all 0.24s ease-out;
+			        transition: all 0.24s ease-out;
+		}
+		#sub-2016-09-zq #splash-block .floating-panel  button:hover::before,
+		#sub-2016-09-zq #splash-block .floating-panel .button:hover::before {
+			opacity: 1;
+			box-shadow:
+				0 0 10px 556px rgba(255, 255, 255, 0.5),
+				0 0 48px 586px rgba(64, 0, 0, 0.12)
+			;
 		}
 		#sub-2016-09-zq #splash-block .floating-panel .hero-content {
 			font-weight: 400;
@@ -820,6 +861,15 @@
 		height: 270px;
 		cursor: pointer;
 	}
+	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-locator {
+		position: fixed;
+		width: 130px;
+		height: 270px;
+		left: auto;
+		right: 50px;
+		top: 25%;
+		margin: 0;
+	}
 	#sub-2016-09-zq .aside.floating-qrcode > .content {
 		position: absolute;
 		right: 0;
@@ -840,15 +890,38 @@
 		display: block;
 		width: 120px;
 		height: 120px;
+		position: fixed;
+		right: 50px;
+		top: 25%;
+		margin: 96px 5px 0 0;
 		background-color: #ef5426;
+	}
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image {
+		z-index: 3;
 		position: absolute;
-		right: 5px;
-		top: 96px;
-		margin: 0;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
-		background-size: 100px 100px;
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		left: 0;
+		top: 0;
+		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
+		-webkit-transform-origin: left top;
+		        transform-origin: left top;
+		    -ms-transform-origin: left top;
+
+	    -ms-filter: "\
+	    	progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+			    src='../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png',\
+			    sizingMethod='scale'\
+			)\
+		";
+	}
+	:root #sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image {
+	    filter: none;
 	}
 	#sub-2016-09-zq .aside.floating-qrcode .label {
 		display: block;
@@ -864,32 +937,97 @@
 		line-height: 1.4;
 	}
 
-	#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode {
-		width: 240px;
-		height: 240px;
-		right: 120px;
-		top: 51px;
-		background-size: 200px 200px;
+
+
+	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-locator,
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode .qrcode-image,
+	#sub-2016-09-zq .aside.floating-qrcode .qrcode {
+		-webkit-transition-property: all;
+		        transition-property: all;
+		-webkit-transition-duration: 0.18s;
+		        transition-duration: 0.18s;
 		}
-		#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-locator,
-		#sub-2016-09-zq .aside.floating-qrcode .qrcode {
-			-webkit-transition-property: all;
-			        transition-property: all;
-			-webkit-transition-duration: 0.18s;
-			        transition-duration: 0.18s;
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode {
+			width: 240px;
+			height: 240px;
+			right: 50%;
+			margin-right: -145px;
+			margin-top: 51px;
+			background-size: 200px 200px;
+			box-shadow: 0 0 19px 1px rgba(0, 0, 0, 0.51);
+		}
+		#sub-2016-09-zq .aside.floating-qrcode .qrcode-ie8-shadow {
+			display: none;
+			position: fixed;
+			width: 240px;
+			height: 240px;
+			top: 25%;
+			right: 50%;
+			margin-right: -133px;
+			margin-top: 38px;
+			background-color: black;
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=45)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
+			";
+		}
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+			display: block\0;
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+			display: none\0;
 		}
 
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+			width: 200px\0;
+			height: 200px\0;
+			margin: 20px\0;
+			-webkit-transform: translate(10px, 10px) scale(2.0, 2.0);
+			        transform: translate(10px, 10px) scale(2.0, 2.0);
+			    -ms-transform: translate(10px, 10px) scale(2.0, 2.0);
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+			width: 100px\0;
+			height: 100px\0;
+			margin: 10px\0;
+		}
+		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
+			content: '';
+			position: fixed;
+			height: 240px;
+			background-color: transparent!important;
+
+			width: auto;
+			left: 50%;
+			right: 50px;
+			top: 25%;
+			margin: 51px 0 0 0;
+
+			width: 50%\0;
+			left: 0\0;
+			top: 0\0;
+			margin: 0\0;
+		}
+		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
+			width: auto\0;
+			left: 50%\0;
+			right: 50px\0;
+			top: 25%\0;
+			margin: 51px 0 0 0\0;
+		}
 		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-locator.benbaobao {
-			left: -180px;
-			top: -40px;
+			right: 50%;
+			margin-right: -90px;
+			margin-top: -45px;
 			-webkit-animation: benbaobao-shaking 0.2s infinite;
-			animation: benbaobao-shaking 0.2s infinite;
-			-ms-animation: benbaobao-shaking 0.2s infinite;
+			        animation: benbaobao-shaking 0.2s infinite;
+			    -ms-animation: benbaobao-shaking 0.2s infinite;
 		}
 		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-look.benbaobao {
 			-webkit-animation: benbaobao-sliding 5s infinite;
-			animation: benbaobao-sliding 5s infinite;
-			-ms-animation: benbaobao-sliding 5s infinite;
+			        animation: benbaobao-sliding 5s infinite;
+			    -ms-animation: benbaobao-sliding 5s infinite;
 		}
 		@-webkit-keyframes benbaobao-shaking {
 			 0% { -webkit-transform: translateY(   0px); }
