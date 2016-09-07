@@ -306,7 +306,7 @@
 			}
 
 
-	#sub-2016-09-zq #splash-block .floating-panel {
+	/* #sub-2016-09-zq #splash-block .floating-panel {
 		display: block;
 		box-sizing: border-box;
 		width: 345px;
@@ -320,26 +320,26 @@
 		background-color: rgba(255, 255, 255, 0.8);
         -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ccffffff, endColorStr=#ccffffff)";
             filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ccffffff, endColorStr=#ccffffff);
-	}
+		}
 
-	#sub-2016-09-zq #splash-block .floating-panel  button,
-	#sub-2016-09-zq #splash-block .floating-panel .button {
-		position: relative;
-		margin: 0 auto;
-		display: block;
-		width: 250px;
-		border-width: 1px;
-		border-style: solid;
-		padding: 11px 15px;
-		color: white;
-		background-color: #f44b4e;
-		border-color: #f44b4e;
-		border-radius: 2px;
-		font-size: 22px;
-		line-height: 22px;
-		overflow: hidden;
-		-webkit-transition: all 0.25s ease-out;
-		        transition: all 0.25s ease-out;
+		#sub-2016-09-zq #splash-block .floating-panel  button,
+		#sub-2016-09-zq #splash-block .floating-panel .button {
+			position: relative;
+			margin: 0 auto;
+			display: block;
+			width: 250px;
+			border-width: 1px;
+			border-style: solid;
+			padding: 11px 15px;
+			color: white;
+			background-color: #f44b4e;
+			border-color: #f44b4e;
+			border-radius: 2px;
+			font-size: 22px;
+			line-height: 22px;
+			overflow: hidden;
+			-webkit-transition: all 0.25s ease-out;
+			        transition: all 0.25s ease-out;
 		}
 		#sub-2016-09-zq #splash-block .floating-panel  button:hover,
 		#sub-2016-09-zq #splash-block .floating-panel .button:hover {
@@ -399,7 +399,7 @@
 		}
 		#sub-2016-09-zq #splash-block .floating-panel .hero-content .hero-word sub {
 			font-size: 56%;
-		}
+		} */
 
 
 #sub-2016-09-zq .section {
@@ -958,6 +958,7 @@
 			top: 0;
 			bottom: 0;
 			z-index: 10;
+			background-color: black\0;
 			background-color: rgba(0, 0, 0, 0.75);
 			visibility: hidden;
 			opacity: 0;
@@ -966,7 +967,7 @@
 			-webkit-transition-duration: 0.18s;
 			        transition-duration: 0.18s;
 		}
-		/* #sub-2016-09-zq .aside.floating-qrcode:hover .back-plate {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover ~ .back-plate {
 			width: 100%;
 			visibility: visible;
 			opacity: 1;
@@ -974,19 +975,22 @@
 			        transition-property: visibility, opacity, background-color;
 			-webkit-transition-duration: 0.18s;
 			        transition-duration: 0.18s;
-		} */
-		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-look.frame {
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=80)\
+			";
+		}
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .symbol .symbol-look.frame {
 			opacity: 0.1;
 			-ms-filter: "\
 				progid:DXImageTransform.Microsoft.Alpha(opacity=10)\
 			";
 		}
-		:root #sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-look.frame {
+		:root #sub-2016-09-zq .aside.floating-qrcode > .content:hover .symbol .symbol-look.frame {
 			-ms-filter: none;
 		}
 
 
-		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode {
 			width: 240px;
 			height: 240px;
 			right: 50%;
@@ -1011,14 +1015,14 @@
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
 			";
 		}
-		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode-ie8-shadow {
 			display: block\0;
 		}
-		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode-ie8-shadow {
+		:root #sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode-ie8-shadow {
 			display: none\0;
 		}
 
-		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode .qrcode-image {
 			width: 200px\0;
 			height: 200px\0;
 			margin: 20px\0;
@@ -1026,12 +1030,12 @@
 			        transform: translate(10px, 10px) scale(2.0, 2.0);
 			    -ms-transform: translate(10px, 10px) scale(2.0, 2.0);
 		}
-		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode .qrcode-image {
+		:root #sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode .qrcode-image {
 			width: 100px\0;
 			height: 100px\0;
 			margin: 10px\0;
 		}
-		#sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode:before {
 			content: '';
 			position: fixed;
 			height: 240px;
@@ -1048,14 +1052,14 @@
 			top: 0\0;
 			margin: 0\0;
 		}
-		:root #sub-2016-09-zq .aside.floating-qrcode:hover .qrcode:before {
+		:root #sub-2016-09-zq .aside.floating-qrcode > .content:hover .qrcode:before {
 			width: auto\0;
 			left: 50%\0;
 			right: 50px\0;
 			top: 25%\0;
 			margin: 51px 0 0 0\0;
 		}
-		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-locator.benbaobao {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .symbol .symbol-locator.benbaobao {
 			right: 50%;
 			margin-right: -90px;
 			margin-top: -45px;
@@ -1063,7 +1067,7 @@
 			        animation: benbaobao-shaking 0.2s infinite;
 			    -ms-animation: benbaobao-shaking 0.2s infinite;
 		}
-		#sub-2016-09-zq .aside.floating-qrcode:hover .symbol .symbol-look.benbaobao {
+		#sub-2016-09-zq .aside.floating-qrcode > .content:hover .symbol .symbol-look.benbaobao {
 			-webkit-animation: benbaobao-sliding 5s infinite;
 			        animation: benbaobao-sliding 5s infinite;
 			    -ms-animation: benbaobao-sliding 5s infinite;
