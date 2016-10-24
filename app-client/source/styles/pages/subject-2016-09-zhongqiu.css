@@ -128,13 +128,13 @@
 		background-size: auto 100%;
 		}
 		#sub-2016-09-zq .splash-illustrate .illustrate.bg {
-			background-image: url(../../images/pages/subject-2016-09-zhongqiu/splash-bg.jpg);
+			background-image: url(../../img/pages/subject-2016-09-zhongqiu/splash-bg.jpg);
 		}
 		#sub-2016-09-zq .splash-illustrate .illustrate.slogan {
-			background-image: url(../../images/pages/subject-2016-09-zhongqiu/splash-slogan.png);
+			background-image: url(../../img/pages/subject-2016-09-zhongqiu/splash-slogan.png);
 		}
 		#sub-2016-09-zq .splash-illustrate .illustrate.cover {
-			background-image: url(../../images/pages/subject-2016-09-zhongqiu/splash-cover.png);
+			background-image: url(../../img/pages/subject-2016-09-zhongqiu/splash-cover.png);
 		}
 
 	#sub-2016-09-zq #splash-block > .width-wrap {
@@ -177,7 +177,7 @@
 			}
 
 			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look {
-				background-image: url(../../images/pages/subject-2016-09-zhongqiu/lanterns.png);
+				background-image: url(../../img/pages/subject-2016-09-zhongqiu/lanterns.png);
 			}
 
 			#sub-2016-09-zq #splash-block .lanterns .symbol .symbol-look.dark {
@@ -410,15 +410,15 @@
 	}
 	#sub-2016-09-zq .section#zhongqiu-section-1 {
 		height: 1025px;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-01.jpg);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/page-bg-01.jpg);
 	}
 	#sub-2016-09-zq .section#zhongqiu-section-2 {
 		height: 865px;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-02.jpg);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/page-bg-02.jpg);
 	}
 	#sub-2016-09-zq .section#zhongqiu-section-3 {
 		height: 797px;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/page-bg-03.jpg);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/page-bg-03.jpg);
 	}
 
 
@@ -560,7 +560,7 @@
 			border-radius: 14px;
 			background-color: transparent!important;
 			background-repeat: no-repeat;
-			background-image: url(../../images/pages/subject-2016-09-zhongqiu/buttons.png);
+			background-image: url(../../img/pages/subject-2016-09-zhongqiu/buttons.png);
 		}
 		#sub-2016-09-zq .section .article  button.call-to-action.has-bg-image:hover,
 		#sub-2016-09-zq .section .article .button.call-to-action.has-bg-image:hover {
@@ -621,8 +621,29 @@
 	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol {
 	}
 	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol .symbol-look.bg {
+		box-sizing: border-box;
+		padding-top: 16px;
+		background-repeat: no-repeat;
 		background-size: 100% auto; 
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/section-1-hero-blocks.png);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/section-1-hero-blocks.png);
+	}
+	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol .symbol-look.bg > div {
+		text-align: center;
+	}
+	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol .symbol-look.bg > div:nth-of-type(1) {
+		font-size: 27px;
+		line-height: 54px;
+	}
+	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol .symbol-look.bg > div:nth-of-type(2) {
+		font-size: 45px;
+		line-height: 80px;
+		font-family: 'Impact', 'Noto Sans CJK', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Helvetica', Arial, 'Lucida Grande', 'SimHei', Sans-Serif;
+		font-weight: 500;
+		color: #f44b4e;
+	}
+	#sub-2016-09-zq #zhongqiu-section-1 .hero-content-block .symbol .symbol-look.bg > div:nth-of-type(3) {
+		font-size: 15px;
+		line-height: 30px;
 	}
 	#sub-2016-09-zq .col-2 .hero-content-block .symbol .symbol-look.bg {
 		z-index: 1;
@@ -635,7 +656,7 @@
 		width: 128px;
 		height: 150px;
 		background-size: 100% auto; 
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/hongbao-baby.png);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/hongbao-baby.png);
 		}
 		#sub-2016-09-zq .symbol-look.hongbao-baby {
 			z-index: 2;
@@ -669,7 +690,7 @@
 	#sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern .symbol {
 	}
 	#sub-2016-09-zq #zhongqiu-section-2 .aside-deco.lantern .symbol .symbol-look.bg {
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/section-2-lantern-aside.jpg);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/section-2-lantern-aside.jpg);
 	}
 
 
@@ -882,7 +903,7 @@
 
 	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-look {
 		background-size: 100% auto;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode-deco.png);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/floating-qrcode-deco.png);
 	}
 	#sub-2016-09-zq .aside.floating-qrcode .symbol .symbol-look.frame {
 		background-position: 0 100%;
@@ -909,14 +930,14 @@
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url(../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
+		background-image: url(../../img/pages/subject-2016-09-zhongqiu/floating-qrcode.png);
 		-webkit-transform-origin: left top;
 		        transform-origin: left top;
 		    -ms-transform-origin: left top;
 
 	    -ms-filter: "\
 	    	progid:DXImageTransform.Microsoft.AlphaImageLoader(\
-			    src='../../images/pages/subject-2016-09-zhongqiu/floating-qrcode.png',\
+			    src='../../img/pages/subject-2016-09-zhongqiu/floating-qrcode.png',\
 			    sizingMethod='scale'\
 			)\
 		";
